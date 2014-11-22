@@ -7,12 +7,12 @@ Import Google Blooger articles by label and generate Docpad static blog.
 
 1. [Install nvm](https://github.com/creationix/nvm)
 
-        ``` bash
-        git clone git://github.com/creationix/nvm.git ~/.nvm
-        printf "\n\n# NVM\nif [ -s ~/.nvm/nvm.sh ]; then\n\tNVM_DIR=~/.nvm\n\tsource ~/.nvm/nvm.sh\nfi" >> ~/.bashrc
-        NVM_DIR=~/.nvm
-        source ~/.nvm/nvm.sh
-        ```
+```bash
+git clone git://github.com/creationix/nvm.git ~/.nvm
+printf "\n\n# NVM\nif [ -s ~/.nvm/nvm.sh ]; then\n\tNVM_DIR=~/.nvm\n\tsource ~/.nvm/nvm.sh\nfi" >> ~/.bashrc
+NVM_DIR=~/.nvm
+source ~/.nvm/nvm.sh
+```
 
 1. [Install Node.js](http://nodejs.org/)
 
