@@ -71,11 +71,11 @@ npm install --save-dev time-grunt
     * titles
     * descriptions
 
-    * src/partials
-    * src/layouts
-    * src/documents/scripts
-    * src/documents/styles
-    * src/documents/images
+  * src/partials
+  * src/layouts
+  * src/documents/scripts
+  * src/documents/styles
+  * src/documents/images
 
 ### Execute
 
