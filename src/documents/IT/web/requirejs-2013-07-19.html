@@ -1,0 +1,18 @@
+---
+layout: IT
+title: RequireJS
+date: '2013-07-19'
+comments: true
+adsense: true
+ignored: true
+tags:
+- development
+- IT
+- javascript
+- management
+- module
+- requireJS
+- web
+---
+
+<h2 id="article_summary" class="summary">Javascript 모듈 관리엔 RequireJS</h2><p>자바스크립트 모듈이 많아 관리가 어렵다면, RequireJS를 사용 해 보세요.</p><h3>설정(Configuration)</h3><p><code><br />require.config({<br />"baseUrl": "/static/js/vendor",<br />"paths": {<br />"app": "../app",<br />"bootstrap": [<br />'//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min',<br />"bootstrap"<br />],<br />"jquery": [<br />"//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min",<br />"jquery-1.9.1.min"<br />],<br />"can": "can",<br />shim: {<br />"bootstrap": {<br />deps: ["jquery"],<br />exports: "$.fn.popover"<br />},<br />enforceDefine: true<br />}<br />}<br />});<br /></code></p><p></p><h3>모듈 정의(define function)</h3><p><code><br />define(["jquery"],function($){<br />return {<br />getParam: function(param<em>name){<br />var value = new RegExp('[\?&amp;]' + param</em>name + '=([^&amp;#]*)').exec(window.location.href);<br />return value[1];<br />},<br />test: function(text){<br />console.log("test : "+text);<br />}<br />};<br />});<br /></code></p><h3>두 모듈을 한 파일에 넣는 방법(requirejs, two classes in one file)</h3><p><a title="requirejs-two-classes-in-one-file" href="http://stackoverflow.com/questions/9806940/requirejs-two-classes-in-one-file" target="_blank">http://stackoverflow.com/questions/9806940/requirejs-two-classes-in-one-file</a><br /><code><br />define('test', ['jquery'], function() {<br />var exports = {};<br />exports.test1 = {<br />method1 : function () {<br />console.log("test1 - method 1");<br />},<br />method2 : function () {<br />console.log("test1 - method 2");<br />}<br />};<br />exports.test2 = {<br />method1 : function () {<br />console.log("test2 - method 1");<br />},<br />method2 : function () {<br />console.log("test2 - method 2");<br />}<br />};<br /><br />return exports;<br />});<br /></code></p><p>그리고 아래처럼 사용하면 된다.<br /><code>require(['test'], function (test) {<br />var test1 = test.test1;<br />});<br /></code></p><p>두 모듈을 한 파일에 넣는 다른 방법<br /><a title="modular-javascript-with-requirejs" href="http://blog.credera.com/topic/technology-solutions/java/modular-javascript-with-requirejs" target="_blank">http://blog.credera.com/topic/technology-solutions/java/modular-javascript-with-requirejs</a><br /></p><p><code><br />define(['json!data/customers'], function(customers){<br />var getRow = function(id) {<br />return customers[id];<br />};<br /><br />var getAll = function() {<br />return customers;<br />};<br /><br />var update = function(data) {<br />// do something cool with the data<br />};<br />return {<br />get: getRow,<br />list: getAll,<br />update: update<br />};<br />});<br /></code></p><br /><h3>오류 해결</h3><p><ul><li>Jquery CDN경로가 올바르지 못할 경우 Bootstrap로딩에 오류가 난다.</li><li>같은 모듈(예: bootstrap)이 중복 로드될 경우 충돌이 일어난다.</li></ul></p><h3><a title="RequireJS" href="http://requirejs.org" target="_blank">RequireJS 홈페이지</a></h3>

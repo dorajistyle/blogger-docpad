@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '문화생활', description: '', collection: '문화'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '아시아 여행기', description: '아시아를 떠돌며 겪은 순간순간의 기억', collection: '아시아'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '중동 여행기', description: '중동을 여행하며 겪은 기억의 단편', collection: '중동'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

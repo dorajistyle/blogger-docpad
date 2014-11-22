@@ -1,0 +1,7 @@
+---
+title: 홍콩
+layout: 영화
+---
+
+<%- @partial('list', {collectionName: '홍콩'}) %>
+

@@ -1,0 +1,13 @@
+<div class="pure-u-1">
+    <div class="content">
+    <div class="posts">
+<%- @partial('article', {title: @document.title, url: @document.url, tags: @document.tags, date: @document.date, content: @content, individualPost: true }) %>
+        </div>
+    <%- @partial('disqus') if @document.comments and @disqusShortName %>
+    <%- @partial('me') %>
+    </div>
+
+<%- @partial('footer', {document: @document}) %>
+	
+
+</div>

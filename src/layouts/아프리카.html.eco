@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '아프리카 여행기', description: '아프리카를 돌아다니며 겪은 기억', collection: '아프리카'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

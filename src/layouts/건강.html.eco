@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '건강 이야기', description: '건강한 삶을 사는 방법', collection: '건강'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

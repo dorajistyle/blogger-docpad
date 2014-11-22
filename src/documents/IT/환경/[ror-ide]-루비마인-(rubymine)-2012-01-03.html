@@ -1,0 +1,16 @@
+---
+layout: IT
+title: "[RoR,IDE] 루비마인 (RubyMine)"
+date: '2012-01-03'
+comments: true
+adsense: true
+ignored: true
+tags:
+- IDE
+- IT
+- RoR
+- RubyMine
+- "환경"
+---
+
+<h2 id="article_summary" class="summary">괜찮은 루비온 레일즈 개발 도구, 루비마인을 소개 합니다.</h2><p>저에겐 이클립스가 가장 익숙한 IDE입니다.<br />그런데 요즘은 자바보단 RoR개발에 흥미가 있어서,<br />루비온레일즈용 IDE를 찾아보았어요.<br />이클립스에서도 루비온 레일즈용 플러그인인 aptana를 제공하긴 하지만,<br />다른 계열의 도구를 한번 써보고 싶었어요.</p><p><img class="photo" src="http://i786.photobucket.com/albums/yy144/dorajistyle/Captures%20for%20posting/rubymine01.jpg" alt="루비 마인 (RubyMine)" width="400" height="300" /></p><p>루비마인은 IntelliJ IDEA 계열의 IDE입니다.<br />얼마간 쓰다 보니, 금방 이클립스보다 더 친숙해졌어요.:D<br />UI가 직관적이라 따로 메뉴얼을 보지 않아도 금방 익숙해집니다.<br />물론 이클립스 같은 다른 IDE에 익숙한 경우에 말이죠. ^^;<br />다른 IDE에서 넘어오는 사용자를 위해, 친절하게 키셋도 제공해요.<br />이클립스의 키셋을 설정했더니, 단축키도 익숙하고 편하네요!<br />RoR개발만 한다면 한번 고려해 볼만한 IDE입니다.<br />저의 루비마인 RoR 개발 환경을 소개할게요.</p><p>우선 전 랩탑과 넷북사이의 어중간한 사양에서 루비마인을 돌려요.<br />그래서 무엇보다 성능 최적화가 중요하죠.<br />검색을 통해 약간의 최적화 팁을 찾았어요.<br />루비 마인은 프로젝트 내의 모든 파일을 인덱싱 합니다.<br />로그파일 처럼 큰 파일을 프로젝트 내에 포함시킨다면, 인덱싱을 하는데 많은 시간을 잡아먹죠.<br />그러니 이런 로그파일은 프로젝트 파일에서 제외시키는 편이 성능에 도움이 되요.</p><p>64비트 자바를 사용하신다면,<br /><span style="color: #0000ff;"><strong> RubyMine\bin\rubymine.exe.vmoptions</strong></span> 파일에서 힙 메모리 옵션을 변경해 주세요.<br /><code><br />-Xms800m<br />-Xmx1200m<br />-XX:MaxPermSize=1000m<br />-ea<br /></code></p><p>저는 위 설정에서 Xmx가 너무 크다고 오류메시지가 나와서 아래처럼 설정을 했습니다.</p><p><code><br />-Xms800m<br />-Xmx964m<br />-XX:MaxPermSize=512m<br />-ea<br /></code></p><h3>Jquery 코드 어시스트 적용하기</h3><p>Settings &raquo; JavaScript Libraries 로가서 Jquery 라이브러리를 추가해줍니다.<br />그리고 Usage Scope에서 추가한 Jquery에 체크를 하면 Jquery 코드 어시스트를 사용할 수 있어요.</p><h3>Blueforest 색상 세트 적용하기</h3><p>루비 마인에서 기본 색상 세트를 제공하지만, 저는 <a title="Blue Forest Color Scheme" href="https://github.com/sirthias/BlueForest" target="_blank">Blueforest</a> 색상 세트를 약간 수정하여 사용합니다.<br />아주 만족스럽네요.:D</p><h3>TODO List 사용하기</h3><p>Setting에서 Todo페이지를 엽니다.<br />TODO 패턴을 정의합니다.<br />Ctrl+Slash 키나 Ctrl+Divide로 주석을 만들고 todo를 입력합니다.</p><p>예제<br /><code>#todo 해야할 일 목록 작성하기</code></p><p><img class="photo" src="http://i786.photobucket.com/albums/yy144/dorajistyle/Captures%20for%20posting/rubymine02.jpg" alt="루비 마인 (RubyMine)" width="293" height="112" /></p><p>저는 crisis, hold, todo를 정의하여 사용 하고 있습니다.<br />루비마인에서 자동으로 트랙킹을 해 주기 때문에,<br />추후에 기능을 추가할  부분에 써 놓으면 편리해요.</p><p>맥이 아니라 Textmate도 없고,<br />괜찮은 루비온레일즈용 개발 도구를 찾고 계시다면 루비마인 한번 고려해 보세요.:D</p><h3>참고 자료</h3><p><a title="JetBrains RubyMine" href="http://www.jetbrains.com/ruby/index.html" target="_blank"> Ruby on Rails IDE :: JetBrains RubyMine</a></p><p><a title="Using TODO Lists" href="http://www.jetbrains.com/ruby/webhelp/using-todo-lists.html" target="_blank">Using TODO Lists</a></p><p><a title="Set/Increase Memory Available in Rubymine" href="http://www.williambharding.com/blog/uncategorized/setincrease-memory-available-in-rubymine/" target="_blank">Set/Increase Memory Available in Rubymine</a></p><p><a title="A couple of tips for RubyMine performance optimization" href="http://kailuowang.blogspot.com/2011/04/couple-of-tips-for-rubymine-performance.html" target="_blank">A couple of tips for RubyMine performance optimization</a></p><p><a title="BlueForest Color Scheme" href="https://github.com/sirthias/BlueForest" target="_blank">BlueForest Color Scheme</a></p>

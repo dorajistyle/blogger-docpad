@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '월풍도원 STATIC', description: '월풍도원 블로그 글을 분류별로 정리하였습니다.'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>
+

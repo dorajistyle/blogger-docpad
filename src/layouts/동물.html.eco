@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '동물 이야기', description: '', collection: '동물'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

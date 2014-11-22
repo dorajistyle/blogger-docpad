@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '대한민국 여행기', description: '한국 팔도를 여행하며 겪은 순간순간의 기억', collection: '대한민국'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

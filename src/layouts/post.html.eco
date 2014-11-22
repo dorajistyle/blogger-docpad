@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="pure-u-1">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- static_blog_top -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4159714136965100"
+     data-ad-slot="8471411541"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	<article id="post" class="post">
+		<h1><%= @document.title %></h1>
+		<div class="post-content"><%- @content %></div>
+	</article>
+
+	<footer>
+		<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>
+		<section id="related">
+			<h3>Related Posts</h3>
+			<nav class="linklist">
+				<% for document in @document.relatedDocuments: %>
+					<li><span><%= document.date.toDateString() %></span>
+					&raquo;
+					<a href="<%= document.url %>"><%= document.title %></a></li>
+				<% end %>
+			</nav>
+		</section>
+		<% end %>
+	</footer>
+</div>

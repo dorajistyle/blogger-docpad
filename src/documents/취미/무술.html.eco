@@ -1,0 +1,7 @@
+---
+title: 무술
+layout: 취미
+---
+
+<%- @partial('list', {collectionName: '무술'}) %>
+

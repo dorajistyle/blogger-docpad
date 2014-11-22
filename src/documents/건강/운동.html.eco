@@ -1,0 +1,7 @@
+---
+title: 운동
+layout: 건강
+---
+
+<%- @partial('list', {collectionName: '운동'}) %>
+

@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '월풍담', description: '월풍은 어떤 생각을 하고 사나?', collection: '월풍'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

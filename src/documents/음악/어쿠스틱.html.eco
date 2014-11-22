@@ -1,0 +1,7 @@
+---
+title: 어쿠스틱
+layout: 음악
+---
+
+<%- @partial('list', {collectionName: '어쿠스틱'}) %>
+

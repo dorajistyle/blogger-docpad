@@ -1,0 +1,20 @@
+---
+layout: IT
+title: "[리눅스,SSH] 리눅스에서 ssh 서버 설정하기 (linux - ssh server configuration)"
+date: '2008-07-04'
+comments: true
+adsense: true
+ignored: true
+tags:
+- configuraion
+- IT
+- linux
+- OS
+- server
+- ssh
+- "리눅스"
+- "설정"
+- "환경"
+---
+
+<div class="imageblock left" style="float: left; text-align: center; padding: 10px;"><img src="http://images.google.com/images?q=tbn:pOWd28BBf5eH6M::thelinuxcauldron.files.wordpress.com/2009/03/ssh.jpg" alt="리눅스에서 ssh 서버 설정하기 (linux - ssh server configuration)[SSH,리눅스,linux,ssh 설정,ssh server configuration]" height="125" width="80"><p style="margin-top: 5px;"><span>이미지출처</span>&nbsp;: <a href="http://thelinuxcauldron.wordpress.com/2009/03/18/13/" onclick="window.open(this.href);return false;"><span style="color: rgb(0, 128, 0);">thelinuxcauldron.wordpress.com</span></a></p></div><font size="3"><span style="font-weight: bold;">리눅스에서 ssh 서버 설정하기 (linux - ssh server configuration)</span></font><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><p>/etc/ssh/sshd_config</p><br /><br /><p>PermitRootLogin - Root 로그인 권한<br /><br />ClientAliveInterval - sshd 접속 유지<br /><br />Port 22 - 사용 포트 변경<br /><br />AllowGroups/DenyGroups - ssh 로그인 할 수 있는/없는 그룹  , wildcard(*,?)  사용가능<br /><br />AllowUsers/DenyUsers - 로그인 할 수 있는/없는 사용자</p><br /><br /><p>설정 변경을 완료하면 데몬을 한번 재시동 해주자!<br /><br />/etc/init.d/sshd restart</p>

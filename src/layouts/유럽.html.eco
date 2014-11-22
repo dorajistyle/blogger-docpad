@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '유럽 여행기', description: '유럽을 돌아다니며 겪은 순간순간의 기억', collection: '유럽'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '음악 감상실', description: '기억하고 싶은 음악', collection: '음악'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

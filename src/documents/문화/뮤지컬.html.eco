@@ -1,0 +1,7 @@
+---
+title: 뮤지컬
+layout: 문화
+---
+
+<%- @partial('list', {collectionName: '뮤지컬'}) %>
+

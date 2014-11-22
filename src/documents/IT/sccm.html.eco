@@ -1,0 +1,7 @@
+---
+title: sccm
+layout: IT
+---
+
+<%- @partial('list', {collectionName: 'sccm'}) %>
+

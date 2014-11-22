@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '책 감상평', description: '책을 읽고 느낀점', collection: '책'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

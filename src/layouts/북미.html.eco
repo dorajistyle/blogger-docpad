@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '북미 여행기', description: '북미를 여행하며 겪은 기억', collection: '북미'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

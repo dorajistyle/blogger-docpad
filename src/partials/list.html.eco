@@ -1,0 +1,12 @@
+<div class="post-list">
+<ul class="list-unstyled">
+	<% for document in @getCollection(@collectionName).toJSON(): %>        
+        <% if document.title: %>
+		<li class="post-list-title">
+                <span class="post-date"><%- @moment(document.date).format('MMMM Do YYYY') %>&nbsp;/&nbsp;</span>
+		<a href="<%= document.url %>"><%= document.title %></a>
+                </li>
+        <% end %>
+	<% end %>
+</ul>
+</div>

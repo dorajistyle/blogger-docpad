@@ -1,0 +1,7 @@
+---
+title: 음료
+layout: 조리법
+---
+
+<%- @partial('list', {collectionName: '음료'}) %>
+

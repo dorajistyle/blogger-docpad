@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '영화 감상평', description: '영화를 보고 느낀점', collection: '영화'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

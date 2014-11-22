@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<% @document.title = @document.tag %>
+<div class="tag-title"><span class="tag-tagname"><%= @document.tag %></span> Posts</div>
+<%- @partial('list', { collection: @getCollection('대한민국').findAll({tags: '$in': @document.tag}) }) %>

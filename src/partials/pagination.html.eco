@@ -1,0 +1,19 @@
+<!-- Page Listing
+<div class="pagination">
+    <ul class="list-unstyled">
+        <!-- Page Number Buttons
+        <% for pageNumber in [0..@document.page.count-1]: %>
+            <% if @document.page.number is pageNumber: %>
+                <li class="active"><span><%= pageNumber + 1 %></span></li>
+            <% else: %>
+                <% if pageNumber == 0: %>
+                <li><a href="<%= @getPageUrl(pageNumber).replace(/.[0-9]$/i,'') %>"><%= pageNumber + 1 %></a></li>
+
+                <% else: %>
+                <li><a href="<%= @getPageUrl(pageNumber).replace(/.[0-9]$/i,'') %>.<%=pageNumber%>"><%= pageNumber + 1 %></a></li>
+                <% end %>
+            <% end %>
+        <% end %>
+
+    </ul>
+</div>-->

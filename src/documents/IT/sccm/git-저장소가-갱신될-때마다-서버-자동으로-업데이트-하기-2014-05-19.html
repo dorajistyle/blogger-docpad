@@ -1,0 +1,20 @@
+---
+layout: IT
+title: git 저장소가 갱신될 때마다 서버 자동으로 업데이트 하기.
+date: '2014-05-19'
+comments: true
+adsense: true
+ignored: true
+tags:
+- git
+- IT
+- linux
+- sccm
+- server
+- shell-jobs
+- "서버"
+- "업데이트"
+- "자동"
+---
+
+<h2 id="article_summary" class="summary">git 저장소에 변화가 생기면, 서버에 자동으로 업데이트하는 스크립트.</h2><br /><p>소스가 변경될 때 마다, 라이브서버에 소스를 업데이트 하는 일은 참 귀찮은 일이다.<br />그래서 보통 cron을 이용해 서버에 소스 자동 업데이트를 하곤 한다.<br />이번에도 cron을 이용해 자동 업데이트를 구축하려다가 한가지 문제에 부딪혔다.<br />crontab에서 스크립트를 돌릴경우 상대경로를 쓰지 못한다는 거다.<br />그래서 비슷한 걸 찾아 헤매다가 shell-jobs를 발견했고,<br />이를 이용해 git 저장소가 갱신될 때마다 서버를 자동 업데이트하도록 구축했다.</p><br /><h3>작동 순서</h3><ol><li>shell-jobs 데몬 실행.</li><li>shell-jobs에서 일정 시간마다 ~/update.sh를 호출.</li><li>~/update.sh에서 원격 저장소를 업데이트하고 변경사항이 있다면 update_platform.sh를 호출.</li><li>update_platform.sh에서 소스를 업데이트하고 서버를 재구동.</li></ol><br /><h3>shell-jobs(<a title="shell-jobs cron replacement" href="https://github.com/azer/shell-jobs" target="_blank">https://github.com/azer/shell-jobs</a>)</h3><h4>설치</h4><p><code>npm install -g shell-jobs</code></p><h4>설정파일 작성</h4><p><span style="text-decoration: underline;">update.jobs</span><br /><code>~/update.sh &gt; ~/cron.log # =&gt; 10 minutes</code></p><h4>shell-jobs 데몬으로 구동</h4><p><code>shell-jobs update.jobs -d</code></p>리눅스 시동시에 자동으로 구동되도록 하려면, /etc/rc.local파일에도 위 코드를 추가한다.<br /><br /><h3>update.sh</h3><p>원격 저장소를 업데이트하고 git diff를 통해 로컬과 다른점을 검사한다.<br />grep -v 뒤에는 로컬 변경을 무시할 파일명을 넣는다.<br />만약 원격 저장소와 다른 점이 있다면 update_platform.sh를 실행한다.<br /><code>#!/bin/sh<br />cd /home/project<br />git remote update<br />diff=$(git diff remotes/origin/master master | grep -v <무시할 변경사항>)<br />if ["$diff" == ""]<br />then<br />echo "no diffs"<br />else<br />echo "have diffs"<br />~/update_platform.sh<br />fi</code><br /><br /><h3>update_platform.sh</h3><p>소스를 최신으로 업데이트하고, 서버를 재구동하는 스크립트.<br />sed를 이용해 debug플래그와 project.wsgi파일을 변경하기 때문에,<br />git reset --hard로 로컬 변경사항을 무시한다.<br /><code>#!/bin/sh<br />cd /home/project<br />git checkout master<br />git reset --hard master<br />git pull<br />pip2 install -r requirements.txt<br />alembic revision --autogenerate -m "Alembic initilized boilerplate tables."<br />alembic upgrade head<br />sed -i "s/^DEBUG = .*/DEBUG = False/" ./application/config/debug_flag.py<br />sed -i "s/^sys.path.insert.*/sys.path.insert\(0, '\/home\/project'\)/" ./project.wsgi<br />chown me -R .<br />~/restart_server.sh</code><br /><br /><h3>resteart_server.sh</h3><p>간혹 서버를 직접 재구동하기도 하니, 서버 재구동용 스크립트는 따로 작성한다.<br /><code>#!/bin/sh<br />service apache2 restart</code><br />

@@ -1,0 +1,18 @@
+---
+layout: IT
+title: "[자바(Java)] 자바 API, Javadoc 만들기 - APIviz"
+date: '2009-09-28'
+comments: true
+adsense: true
+ignored: true
+tags:
+- api
+- apiviz
+- development
+- IT
+- Java
+- javadoc
+- "자바"
+---
+
+<div class="imageblock left" style="float: left; text-align: center; padding: 10px;"><img src="http://images.google.com/images?q=tbn:3yVTst6xCedawM::blogs.sun.com/theplanetarium/resource/java-logo.jpg" alt="자바 API, Javadoc 만들기 - APIviz[API,Javadoc,Java,자바]" height="119" width="119"><p style="margin-top: 5px;"><span>이미지출처</span>&nbsp;: <a href="http://blogs.sun.com/theplanetarium/entry/maybe_java_me" onclick="window.open(this.href);return false;"><span style="color: rgb(0, 128, 0);">blogs.sun.com</span></a></p></div><font size="3"><span style="font-weight: bold;">자바 API, Javadoc 만들기 - APIviz</span></font><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />인수인계를 위해, 어떠한 형태의 문서가 좋을까 고민을 하다가,<br /><br />내가 참여한 클래스와 메소드들에 대한 설명을 적어서 Javadoc으로 뽑고,<br /><br />메인페이지에 필요한 사항을 수정하였다.<br /><br /><br /><br />다이어그램을 자동으로 그려주는 APIviz(<a target="_blank" href="http://code.google.com/p/apiviz/">http://code.google.com/p/apiviz/</a>)를 사용하였는데,<br /><br />사용법은 이클립스에서 export시에 다음과 같이 doclet설정을 해주면 된다. (APIviz How to use)<br /><div style="border: 1px solid rgb(204, 204, 204); padding: 10px; background-color: rgb(244, 244, 244);">Use Custom Doclet<br /><br />Doclet Name : org.jboss.apiviz.APIviz<br /><br />Doclet Class-Path : APIvizPath\jar\apiviz-1.3.0.GA.jar<br /><br />이후 Vm Option에서 Graphviz 경로 설정 (and Graphviz path setting in VM options)<br /></div><br />아래와 같이 필요한 Vm 옵션도 몇가지 추가하였다. (My custom vm options)<br /><br /><div style="border: 1px solid rgb(187, 187, 187); padding: 10px; background-color: rgb(221, 221, 221);">VM options<br />-encoding UTF-8 -charset UTF-8 -docencoding UTF-8&nbsp; (한글 Javadoc을 만들기 위해[for unicode document])<br /><span style="color: rgb(255, 0, 136);">-J-Dgraphviz.home=GraphvizPath\bin (Graphviz 설정 [Graphviz Setting])</span><br />-J-Xmx512m (내보낼 문서의 양이 많을때 메모리 부족 에러가 난다. [Prevent out of memory error during export Javadoc])<br /><br />Extra Javadoc options<br /><span style="color: rgb(255, 0, 136);">-d OutputPath (내보낼 경로 [Output Path])</span><br />-tag author:a:"Author:" (작성자 정보를 문서에 포함시킨다. [include author information in document])<br /><br /></div><br />마지막으로 스타일시트는 검색을 하다가,&nbsp; (I used custom stylesheet in follow link.)<br /><br /><a target="_blank" href="http://applegrew.blogspot.com/2008/05/get-my-javadoc-stylesheet-red-n-black.html">http://applegrew.blogspot.com/2008/05/get-my-javadoc-stylesheet-red-n-black.html</a> 를 사용했다.<br /><br /><br /><br />그동안 주석을 잘 안달아놔서 꽤 바쁜 작업이 되긴 했지만,<br /><br />막상 문서작성을 마치고 보니, 꽤 만족스럽다.:D<br /><br /><br />

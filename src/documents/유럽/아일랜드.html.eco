@@ -1,0 +1,7 @@
+---
+title: 아일랜드
+layout: 유럽
+---
+
+<%- @partial('list', {collectionName: '아일랜드'}) %>
+

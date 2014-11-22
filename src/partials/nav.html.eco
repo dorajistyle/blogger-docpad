@@ -1,0 +1,23 @@
+<div class="sidebar pure-u">
+<header class="header">
+<hgroup>
+      <a href="/"><img class="logo" src="/images/logo.jpg" /></a>
+        <h3 class="brand-title"><%= @title %></h3>
+        <h4 class="brand-tagline"><%= @description %></h4>
+</hgroup>
+		<nav id="nav-horizontal-menu" class="nav">
+
+			<ul id="std-menu-items" class="nav-list">
+	        		<li class="nav-item"><a href="/" class="pure-button"><i class="ion-ios7-home"></i></a></li>
+                                <% if @collection?: %>
+				<% for document in @getCollection(@collection).toJSON(): %>
+					<li typeof="sioc:Page" about="<%= document.url %>" class="nav-item <%= 'active'  if @document.url is document.url %>">
+						<a class="pure-button" href="<%= document.url %>" property="dc:title"><%= document.title %></a>
+					</li>
+				<% end %>
+                           <% end %>
+			</ul>
+		</nav>
+                </header>
+</div>
+

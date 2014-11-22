@@ -1,0 +1,17 @@
+---
+layout: IT
+title: "[행렬] 역행렬은 언제 쓰나? (When I use matrix invertion?)"
+date: '2008-01-31'
+comments: true
+adsense: true
+ignored: true
+tags:
+- invertion
+- IT
+- Matrix
+- theory
+- "역행렬"
+- "이론"
+---
+
+<script src='http://ss.textcube.com/service/blog/script/blogger.js' type='text/javascript'></script><div class="imageblock left" style="float: left; text-align: center; padding: 10px;"><img src="http://images.google.com/images?q=tbn:vDen1pb324JXlM::upload.wikimedia.org/math/7/e/a/7ea0fa3d6987ad96f83289a0e19933d1.png" alt="역행렬은 언제 쓰나? (When I use matrix invertion?) [행렬,역행렬,3D,메트릭스,matrix,matrix invertion]" height="58" width="137"><p style="margin-top: 5px;"><span>이미지출처</span>&nbsp;: <a href="http://en.wikipedia.org/wiki/Lehmer_matrix" onclick="window.open(this.href);return false;"><span style="color: rgb(0, 128, 0);">en.wikipedia.org</span></a></p></div><font style="font-weight: bold;" size="3">역행렬(Matrix invertion)</font><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p>내가 3D를 건드리게 될 줄 알았다면,</p><br /><br /><p>선형대수학을 공부했을 텐데….</p><br /><br /><p>마우스 이벤트는 2D 좌표계에서 움직인다.</p><br /><br /><p>2D상에서 일어난 이벤트로 3D 객체를 변형할 때, 역행렬이 아주 유용하게 사용된다.</p><br /><br /><p>만약   (ㅜ) - 이렇게 생긴 3D 물체를 돌리고, (ㅏ) 상태에서 이동을 시킨다면.  z축으로 90도 회전되었기 때문에,</p><br /><br /><p>마우스를 움직이는 방향과는 다르게 지멋대로 물체가 움직이게 된다.</p><br /><br /><p>이럴때 4*4  행렬의 역행렬을 가져와서 이동을 시키면,</p><br /><br /><p>물체를 돌리기 전 상태에서 이동을 시킬 수 있다.</p><br /><br /><p>자바에서는 Matrix4f의 invert메소드를 사용하면, 역행렬을 구할 수 있다.</p><br /><br /><br /><p><b>4*4 Matrix<br /><br />r = Rotation<br /><br />t = translation<br /><br />[<br /><br />{rx0,rx1,rx2,tx},<br /><br />{ry0,ry1,ry2,ty},<br /><br />{rz0,rz1,rz2,tz},<br /><br />{0,0,0,1}<br /><br />]</b></p><p><br /></p><p><br /></p><p><b>----</b></p><p id="more-92-0" class="moreless_fold" style="color: #000000; padding: 0 0 0 10px;"><span style="cursor: pointer;" onclick="if (window.TC$PRIV_toggleMoreLessBlogger != undefined) {TC$PRIV_toggleMoreLessBlogger(this, '92-0','Open english content','Close english content'); return false;} else {document.getElementById('content-92-0').style.display='';}">       Open english content</span></p><div id="content-92-0" class="moreless_content" style="display: none; border: 1px dashed #cccccc; background-color: #f3f3f3; margin: 0 10px padding: 5px;"><p>If i know that doing 3D, I did learning linear algebra.</p><br /><br /><p>Matrix invertion useful use in the 3D object transformation with 2D events.</p><br /><br /><p>If    (ㅜ) - rotate like this - (ㅏ) and translation. You don’t see wanted action that It rotated by Z axis.</p><br /><br /><p>In This time, if you use matrix invertion, you can translate it in previous(before rotation) matrix.</p><br /><br /><p>You can see in java API Matrix4f class’s invert() method.</p><br /><br /><br /><p><b>4*4 Matrix<br /><br />r = Rotation</b></p><p><b><b><b> t = translation<br /><br />[<br /><br />{rx0,rx1,rx2,tx},<br /><br />{ry0,ry1,ry2,ty},<br /><br />{rz0,rz1,rz2,tz},<br /><br />{0,0,0,1}<br /><br />]</b></b></b></p></div>

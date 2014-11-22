@@ -1,0 +1,7 @@
+---
+title: 삶
+layout: 월풍
+---
+
+<%- @partial('list', {collectionName: '삶'}) %>
+

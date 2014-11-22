@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '조리법', description: '맛있는 음식을 만드는 법', collection: '조리법'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

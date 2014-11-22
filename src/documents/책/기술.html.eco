@@ -1,0 +1,7 @@
+---
+title: 기술
+layout: 책
+---
+
+<%- @partial('list', {collectionName: '기술'}) %>
+

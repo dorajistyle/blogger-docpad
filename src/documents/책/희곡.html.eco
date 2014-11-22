@@ -1,0 +1,7 @@
+---
+title: 희곡
+layout: 책
+---
+
+<%- @partial('list', {collectionName: '희곡'}) %>
+

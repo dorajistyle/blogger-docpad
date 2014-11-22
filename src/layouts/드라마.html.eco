@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '드라마 감상평', description: '드라마를 보고 느낀점', collection: '드라마'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

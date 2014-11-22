@@ -1,0 +1,18 @@
+---
+layout: IT
+title: Nginx에서 FastCGI를 이용한 PHP 설정
+date: '2014-06-09'
+comments: true
+adsense: true
+ignored: true
+tags:
+- FastCGI
+- IT
+- NGINX
+- PHP
+- server
+- setting
+- web
+---
+
+<h2 id="article_summary" class="summary">Nginx 서버에서 FastCGI를 이용하여 PHP 설정하기.</h2><br /><h3>필요 패키지 설치 (Arch linux 기준)</h3><ul><li>sudo pacman -S php</li><li>sudo pacman -S php-fpm</li><li>sudo pacman -S php-sqlite</li></ul><br /><h3>/etc/php/php.ini 수정 </h3><ol><li><code>open_basedir = list_base_directories_which_contain_PHP_files</code></li><li>uncomment<br /><code>extension=sqlite3.so<br />extension=openssl.so</code><br />extension=sqlite3.so는 php-fpm을 위해 필요하다.<br />extension=openssl.so는 https로 요청을 보낼 때 필요하다.<br /></li></ol><br /><h3>nginx.conf</h3><code>http{<br />server{<br />location ~ \.php$ {<br />root /root_directory_of_php;<br />fastcgi_split_path_info ^(.+\.php)(/.+)$;<br /># fastcgi_pass 127.0.0.1:8050;<br />fastcgi_pass unix:/run/php-fpm/php-fpm.sock;<br />fastcgi_index index.php;<br />include fastcgi.conf;<br />fastcgi_param DOCUMENT_ROOT /root_directory_of_php/inilite_php;<br />include fastcgi_params;<br />}<br />}<br />}<br /></code><br /><br /><h3>nginx 설정 오류 확인</h3><code>sudo nginx -t</code><br /><br /><h3>참조</h3><a href="https://wiki.archlinux.org/index.php/nginx#PHP_implementation" target="_blank">https://wiki.archlinux.org/index.php/nginx#PHP_implementation</a><br /><a href="http://www.sitepoint.com/setting-up-php-behind-nginx-with-fastcgi/" target="_blank">http://www.sitepoint.com/setting-up-php-behind-nginx-with-fastcgi/</a>

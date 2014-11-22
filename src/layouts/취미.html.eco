@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '취미생활', description: '취미생활', collection: '취미'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

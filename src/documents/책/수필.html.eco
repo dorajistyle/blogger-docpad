@@ -1,0 +1,7 @@
+---
+title: 수필
+layout: 책
+---
+
+<%- @partial('list', {collectionName: '수필'}) %>
+

@@ -1,0 +1,17 @@
+---
+layout: IT
+title: sphinx로 파이썬 flask 개발 문서 만들기
+date: '2013-08-03'
+comments: true
+adsense: true
+ignored: true
+tags:
+- development
+- flask
+- IT
+- Python
+- sphinx
+- web
+---
+
+<h2 id="article_summary" class="summary">파이썬 flask 개발 문서 만드는데 5분. Sphinx.</h2><p>문서 작성도 개발의 일환입니다.<br />개발자는 깔끔한 문서를 만들고 싶지만,<br />문서 작성에 많은 시간을 들이고 싶지는 않지요.<br />Sphinx가 바로 그 딜레마를 해결해 주는 도구입니다.</p><br /><h3>Sphinx로 파이썬 Flask 개발 문서 만들기 순서</h3><ol><li>Sphinx와 sphinxcontrib-httpdomain를 설치합니다.<br /><code>$ pip install sphinx<br />$ pip sphinxcontrib-httpdomainproject 폴더에 doc 폴더 생성합니다.</code></li><li>doc 폴더로 갑니다.</li><li>sphinx-quickstart를 실행하여 기본 설정을 잡습니다.<br /><code>$ sphinx-quickstart</code></li><li>conf.py에 다음을 추가합니다.<br /><code>sys.path.append(os.path.abspath('..'))<br /># 확장<br />extensions = ['sphinx.ext.autodoc',<br />'sphinx.ext.intersphinx',<br />'sphinxcontrib.autohttp.flask']<br /># 테마 (default|basic|sphinxdoc|scrolls|agogo|traditional|nature|haiku|pyramid)<br />html_theme = "nature"</code><br />기본으로 제공하는 테마 외에도 내려받거나 직접 만든 테마도 사용 가능합니다.</li><li>rst파일을 생성합니다.<br />API 예시<br /><code>Users<br />--------------------------<br />.. autoflask:: application.api:create_app()<br />:undoc-static:<br /># api에 포함시키고 싶지 않은 blueprints.<br />:undoc-blueprints:</code></li><li>문서를 생성합니다.<br /><code>$ make html</code></li></ol><h3>참고 자료</h3><p><a title="sphinx 튜토리얼" href="http://sphinx-doc.org/tutorial.html" target="_blank">http://sphinx-doc.org/tutorial.html</a><br /><a title="sphinx 테마 사용법" href="http://sphinx-doc.org/theming.html" target="_blank">http://sphinx-doc.org/theming.html</a><br /><a title="sphinxcontrib-httpdomain" href="http://pythonhosted.org/sphinxcontrib-httpdomain/" target="_blank">http://pythonhosted.org/sphinxcontrib-httpdomain/</a></p>

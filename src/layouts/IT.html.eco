@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: 'IT 이야기', description: '소프트웨어 개발과 IT전반에 걸친 이야기.', collection: 'IT'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

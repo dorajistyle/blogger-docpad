@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '지식 이야기', description: '보고들은 지식', collection: '지식'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>

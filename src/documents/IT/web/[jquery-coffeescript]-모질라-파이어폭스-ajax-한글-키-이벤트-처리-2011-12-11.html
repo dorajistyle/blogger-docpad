@@ -1,0 +1,20 @@
+---
+layout: IT
+title: "[Jquery,CoffeeScript] 모질라 파이어폭스 Ajax. 한글 키 이벤트 처리."
+date: '2011-12-11'
+comments: true
+adsense: true
+ignored: true
+tags:
+- Ajax
+- coffeescript
+- IT
+- jquery
+- Mozilla
+- web
+- "키 이벤트"
+- "파이어폭스"
+- "한글"
+---
+
+<div id="hreview-summary" class="hreview"><h2 id="article_summary" class="summary">모질라 파이어폭스에서 Ajax 한글 키 이벤트를 처리하는 Jquery,커피스크립트 코드입니다.</h2><div class="item"><span class="fn">모질라 파이어폭스 Ajax. 한글 키 이벤트 처리.(Jquery Mozilla Force Keyup CoffeeScript module)</span></div><p><span class="description">저는 주 브라우저로 모질라 파이어폭스를 사용합니다.<br />Ajax 모듈을 만드는데, 한글을 입력하면 못 알아듣더군요.<br /><strong><a title="keyboard-events" href="http://javascript.info/tutorial/keyboard-events" target="_blank"> http://javascript.info/tutorial/keyboard-events</a></strong>에서 키 이벤트 체크를 해 봤습니다.<br />한글 키가 눌리면 Keydown(Keycode=229) 이벤트가 한 번만 발생하고,<br />Keyup 이벤트는 발생하지 않습니다.<br />중국어,일본어를 테스트 해보니 이 역시 같은 현상이군요.<br />한글과 다름없이 229키 코드가 딱 한번 발생합니다.<br />아마도 다른 블록형 문자 또한 같은 이벤트를 발생 시킬 거라 예상됩니다.<br />모질라에서 한글 키 이벤트를 부드럽게 처리하는  커피 스크립트 모듈을 만들었어요.<br />모질라 파이어폭스 이용자도 한글을 편하게 쓸 권리가 있으니까요.<br />필요하신 분은 마음껏 가져다 쓰세요.</span></p><p>커피스크립트 버전(Jquery Mozilla Force Keyup module&nbsp; - Coffeescript version)</p><hr /><code><br />&nbsp;&nbsp;<br /># Mozilla Force Keyup CoffeeScript module<br /># by 月風(http:://dorajistyle.pe.kr)<br /># How to use<br /># mozillaForceKeyup(&rdquo;input<em>id&rdquo;)<br /># in HTML.<br /># &lt;input id=&rdquo;input</em>id&rdquo;&gt;<br />mozillaForceKeyup = (targetId) -&gt;<br />&nbsp; if jQuery.browser.mozilla<br />&nbsp;&nbsp;&nbsp; isIntervalRunning = null<br />&nbsp;&nbsp;&nbsp; target = '#'+targetId<br />&nbsp;&nbsp;&nbsp; $(target).bind 'keydown',(e) -&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if e.which == 229<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; forceKeyup = () -&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(target).trigger('keyup')<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not isIntervalRunning<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isIntervalRunning = setInterval forceKeyup, 100</p><p>&nbsp;&nbsp;&nbsp; $(target).bind 'blur',(e) -&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if isIntervalRunning<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clearInterval isIntervalRunning<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isIntervalRunning = null</p></code><br /><br />자바스크립트 버전(Jquery Mozilla Force Keyup module - Javascript version)<br /><br /><hr /><code><br />// Mozilla Force Keyup Javascript module<br />// by 月風(http:://dorajistyle.pe.kr)<br />// How to use<br />// mozillaForceKeyup(&rdquo;input<em>id&rdquo;)<br />// in HTML.<br />// &lt;input id=&rdquo;input</em>id&rdquo;&gt;</p>mozillaForceKeyup = function(targetId) {<br />var isIntervalRunning, target;<br />if (jQuery.browser.mozilla) {<br />isIntervalRunning = null;<br />target = '#' + targetId;<br />$(target).bind('keydown', function(e) {<br />var forceKeyup;<br />if (e.which === 229) {<br />forceKeyup = function() {<br />return $(target).trigger('keyup');<br />};<br />if (!isIntervalRunning) {<br />return isIntervalRunning = setInterval(forceKeyup, 100);<br />}<br />}<br />});<br />return $(target).bind('blur', function(e) {<br />if (isIntervalRunning) {<br />clearInterval(isIntervalRunning);<br />return isIntervalRunning = null;<br />}<br />});<br />}<br />};<br /></code><br /><br /><br /><br /><br /></div>

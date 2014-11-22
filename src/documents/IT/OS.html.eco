@@ -1,0 +1,7 @@
+---
+title: OS
+layout: IT
+---
+
+<%- @partial('list', {collectionName: 'OS'}) %>
+

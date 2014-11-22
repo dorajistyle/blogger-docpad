@@ -1,0 +1,18 @@
+---
+layout: IT
+title: JSDOC
+date: '2013-07-17'
+comments: true
+adsense: true
+ignored: true
+tags:
+- development
+- IT
+- javascript
+- JSDOC
+- web
+- "문서"
+- "작성"
+---
+
+<h2 id="article_summary" class="summary">자바스크립트용 개발 문서 작성기. JSDOC</h2><h3>주석 달기</h3><p><code><br />/** define namespace<br />* @namespace category<br />*/<br /><br />/** use namespace with hash<br />* @name category#name<br />* @constructor<br />*/<br /><br />/** use member of for constructor<br />*@memberof category#name<br />*/<br /></code></p><br /><h3>설정(configuration)</h3><p>remove all comments.<br />// You must remove the comments before adding these options to your .json file<br /><code><br />{<br />"tags":{<br />"allowUnknownTags":true<br />},<br />"source":{<br />"include":[],<br />"exclude":[],<br />"includePattern":".+\.js(doc)?$",<br />"excludePattern":"(^|\/|\\)_"<br />},<br />"plugins":[],<br />"templates":{<br />"cleverLinks":false,<br />"monospaceLinks":false<br />},<br />"opts":{<br />"template":"default",            // same as -t default<br />"encoding":"utf8",               // same as -e utf8<br />"destination":"./out/",          // same as -d ./out/<br />"recurse":true,                  // same as -r<br />"tutorials":"path/to/tutorials",// same as -u path/to/tutorials, default "" (no tutorials)<br />"query":"value",                 // same as -q value, default "" (no query)<br />"private":true,                  // same as -p<br />"lenient":true,                  // same as -l<br />// these can also be included, though you probably wouldn't bother<br />// putting these in conf.json rather than the command line as they cause<br />// JSDoc not to produce documentation.<br />"version":true,                  // same as --version or -v<br />"explain":true,                  // same as -X<br />"test":true,                     // same as -T<br />"help":true,                     // same as --help or -h<br />"verbose":true,                  // same as --verbose, only relevant to tests.<br />"match":"value",                 // same as --match value, only relevant to tests.<br />"nocolor":true                   // same as --nocolor, only relevant to tests<br />}<br />}<br /></code></p><br /><p><strong>실행 </strong><br /><code>jsdoc -c conf.json</code><br /></p><p><h3><a title="jsdoc github" href="https://github.com/jsdoc3/jsdoc" target="_blank">JSDOC github</a></p></h3>

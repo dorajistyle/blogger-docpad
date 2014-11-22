@@ -1,0 +1,24 @@
+---
+cacheable: false
+---
+<article id="post" class="post">
+    <header class="post-header">
+    <% if @individualPost: %>
+    <h1 class="post-title"><%= @title %></h1>
+    <% else: %>
+    <h1 class="post-title"><a href='<%= @url %>'><%= @title %></a></h1>
+    <% end %>
+    </header>
+    <div class="post-content">
+        <%- @partial('adsense', false) if @document.adsense %> 
+        <p>
+        <%- @content %>
+        </p>
+        <%- @partial('adsense_bottom', false) if @document.adsense %> 
+    </div>
+    <% if @tags_postpone?: %>
+    <div class="post-tags">
+        Posted In: <%- ("<a href='#{@getTagUrl(tag)}'>#{tag}</a>" for tag in @tags).join(', ') %>
+    </div>
+    <% end %>
+</article>

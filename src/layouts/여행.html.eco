@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<%- @partial('nav', {title: '여행 전반', description: '', collection: '여행'}) %>
+
+<%- @partial('main', {document: @document, content: @content}) %>
