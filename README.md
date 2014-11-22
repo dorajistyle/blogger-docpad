@@ -89,7 +89,15 @@ npm install --save-dev time-grunt
 ./import.sh
 ```
 
-### Generated static blog.
+
+
+### Sample
+
+* Original blog.
+
+  [dorajistyle.pe.kr](http://dorajistyle.pe.kr)
+
+* Generated docpad static blog.
 
   [dorajistyle.net](http://dorajistyle.net)
 
