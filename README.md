@@ -14,27 +14,27 @@ NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
 ```
 
-1. [Install Node.js](http://nodejs.org/)
+2. [Install Node.js](http://nodejs.org/)
 
 ```bash 
 nvm install v0.10.25
 nvm alias default 0.10
 nvm use 0.10
 ```
-1. [Install jekyll-import](https://github.com/jekyll/jekyll-import)
+3. [Install jekyll-import](https://github.com/jekyll/jekyll-import)
 
 ```bash
 gem install jekyll-import
 ```
 
-1. [Install DocPad](https://github.com/bevry/docpad)
+4. [Install DocPad](https://github.com/bevry/docpad)
                 
 ```bash
 sudo npm install docpad -g
 npm install --save cheerio
 ```
 
-1. [Install Blogger-Docpad](https://github.com/dorajistyle/blogger-docpad)
+5. [Install Blogger-Docpad](https://github.com/dorajistyle/blogger-docpad)
 
 ```bash
 git clone https://github.com/dorajistyle/blogger-docpad 
@@ -52,7 +52,7 @@ npm install --save-dev grunt-shell
 npm install --save-dev time-grunt
 ```
 
-1. Edit config files to fit your blog
+### Edit config files to fit your blog
 
   Make sure that a category name should be unique.
 
@@ -77,13 +77,15 @@ npm install --save-dev time-grunt
     * src/documents/styles
     * src/documents/images
 
+### Execute
+
 1. Run init.sh to init blogger-docpad
                 
 ```bash
 ./init.sh
 ```
 
-1. Run import.sh
+2. Run import.sh
 
 ```bash
 ./import.sh
