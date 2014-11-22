@@ -5,7 +5,7 @@ Import Google Blooger articles by label and generate Docpad static blog.
 
 ### Installation
 
-1. [Install nvm](https://github.com/creationix/nvm)
+* [Install nvm](https://github.com/creationix/nvm)
 
 ```bash
 git clone git://github.com/creationix/nvm.git ~/.nvm
@@ -14,27 +14,27 @@ NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
 ```
 
-2. [Install Node.js](http://nodejs.org/)
+* [Install Node.js](http://nodejs.org/)
 
 ```bash 
 nvm install v0.10.25
 nvm alias default 0.10
 nvm use 0.10
 ```
-3. [Install jekyll-import](https://github.com/jekyll/jekyll-import)
+* [Install jekyll-import](https://github.com/jekyll/jekyll-import)
 
 ```bash
 gem install jekyll-import
 ```
 
-4. [Install DocPad](https://github.com/bevry/docpad)
+* [Install DocPad](https://github.com/bevry/docpad)
                 
 ```bash
 sudo npm install docpad -g
 npm install --save cheerio
 ```
 
-5. [Install Blogger-Docpad](https://github.com/dorajistyle/blogger-docpad)
+* [Install Blogger-Docpad](https://github.com/dorajistyle/blogger-docpad)
 
 ```bash
 git clone https://github.com/dorajistyle/blogger-docpad 
@@ -79,13 +79,13 @@ npm install --save-dev time-grunt
 
 ### Execute
 
-1. Run init.sh to init blogger-docpad
+* Run init.sh to init blogger-docpad
                 
 ```bash
 ./init.sh
 ```
 
-2. Run import.sh
+* Run import.sh
 
 ```bash
 ./import.sh
