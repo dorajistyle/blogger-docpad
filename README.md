@@ -16,27 +16,27 @@ Import Google Blooger articles by label and generate Docpad static blog.
 
 1. [Install Node.js](http://nodejs.org/)
 
-        ``` bash       
+        ```bash 
         nvm install v0.10.25
         nvm alias default 0.10
         nvm use 0.10
         ```
 1. [Install jekyll-import](https://github.com/jekyll/jekyll-import)
 
-        ``` bash
+        ```bash
         gem install jekyll-import
         ```
 
 1. [Install DocPad](https://github.com/bevry/docpad)
                 
-         ``` bash
+         ```bash
         sudo npm install docpad -g
         npm install --save cheerio
         ```
 
 1. [Install Blogger-Docpad](https://github.com/dorajistyle/blogger-docpad)
 
-        ``` bash
+        ```bash
         git clone https://github.com/dorajistyle/blogger-docpad 
         cd blogger-docpad
         docpad install sitemap
@@ -55,42 +55,42 @@ Import Google Blooger articles by label and generate Docpad static blog.
 
   Make sure that a category name should be unique.
 
-        * import.sh
-                line 37 : git repository.
-                line 40 : domain name.
+    * import.sh
+        line 37 : git repository.
+        line 40 : domain name.
 
-        * docpad.coffee
-                * categories
-                * docpadConfig/templateData/site
-                * docpadConfig/templateData/collections
+    * docpad.coffee
+        * categories
+        * docpadConfig/templateData/site
+        * docpadConfig/templateData/collections
 
-        * src/Gruntfile
-                * categories
-                * intros
-                * titles
-                * descriptions
+    * src/Gruntfile
+      * categories
+      * intros
+      * titles
+      * descriptions
 
-        * src/partials
-        * src/layouts
-        * src/documents/scripts
-        * src/documents/styles
-        * src/documents/images
+    * src/partials
+    * src/layouts
+    * src/documents/scripts
+    * src/documents/styles
+    * src/documents/images
 
 1. Run init.sh to init blogger-docpad
                 
-        ``` bash
+        ```bash
         ./init.sh
         ```
 
 1. Run import.sh
 
-        ``` bash
+        ```bash
         ./import.sh
         ```
 
 ### Generated static blog.
 
-        * [dorajistyle.net](http://dorajistyle.net)
+  [dorajistyle.net](http://dorajistyle.net)
 
 ________________________
 
