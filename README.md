@@ -89,6 +89,9 @@ npm install --save-dev time-grunt
 ./import.sh
 ```
 
+### How to handle large number of files with docpad?
+
+It's very tough. The sample blog [dorajistyle.pe.kr](http://dorajistyle.pe.kr) have more than 1000 articles. But docpad can't handle large number of files. However we have a trick. That's adding 'ignored' flag into your articles header. Before generate an article set 'ignored' flag as false. When the article generated, change 'ignored' flag to true. Docpad will ignore articles that already generated. Unfortunately [cleanurls](https://github.com/docpad/docpad-plugin-cleanurls) plugin not working with this trick. If you use the plugin, docpad generate ignored articles without layouts.
 
 
 ### Sample
