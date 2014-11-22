@@ -56,20 +56,20 @@ npm install --save-dev time-grunt
 
   Make sure that a category name should be unique.
 
-    * import.sh
-        * line 37 : git repository.
-        * line 40 : domain name.
+  * import.sh
+    * line 37 : git repository.
+    * line 40 : domain name.
 
-    * docpad.coffee
-        * categories
-        * docpadConfig/templateData/site
-        * docpadConfig/templateData/collections
+  * docpad.coffee
+    * categories
+    * docpadConfig/templateData/site
+    * docpadConfig/templateData/collections
 
-    * src/Gruntfile
-      * categories
-      * intros
-      * titles
-      * descriptions
+  * src/Gruntfile
+    * categories
+    * intros
+    * titles
+    * descriptions
 
     * src/partials
     * src/layouts
