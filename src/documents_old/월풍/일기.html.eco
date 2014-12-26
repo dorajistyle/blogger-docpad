@@ -1,0 +1,7 @@
+---
+title: 일기
+layout: 월풍
+---
+
+<%- @partial('list', {collectionName: '일기'}) %>
+

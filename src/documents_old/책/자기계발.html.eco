@@ -1,0 +1,7 @@
+---
+title: 자기계발
+layout: 책
+---
+
+<%- @partial('list', {collectionName: '자기계발'}) %>
+

@@ -1,0 +1,19 @@
+---
+layout: IT
+title: "[자바(Java)] 자바 성능팁 배열리스트,링크드리스트 (Java PerformenceTip ArrayList/LinkedList)"
+date: '2007-11-23'
+comments: true
+adsense: true
+ignored: false
+tags:
+- ArrayList
+- development
+- IT
+- Java
+- LinkedList
+- list
+- performance
+- "자바"
+---
+
+<div class="imageblock left" style="float: left; text-align: center; padding: 10px;"><img src="http://images.google.com/images?q=tbn:3yVTst6xCedawM::blogs.sun.com/theplanetarium/resource/java-logo.jpg" alt="자바 성능팁 배열리스트,링크드리스트 (Java PerformenceTip ArrayList/LinkedList)[Java,자바,ArrayList/LinkedList]" height="119" width="119"><p style="margin-top: 5px;"><span>이미지출처</span>&nbsp;: <a href="http://blogs.sun.com/theplanetarium/entry/maybe_java_me" onclick="window.open(this.href);return false;"><span style="color: rgb(0, 128, 0);">blogs.sun.com</span></a></p></div><font size="3"><span style="font-weight: bold;">자바 성능팁 배열리스트,링크드리스트 (Java PerformenceTip ArrayList/LinkedList)</span></font><br /><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><a href="http://java.sun.com/developer/JDCTechTips/2002/tt0910.html"><br /></a></p><p><a href="http://java.sun.com/developer/JDCTechTips/2002/tt0910.html">http://java.sun.com/developer/JDCTechTips/2002/tt0910.html</a></p><p>ArrayList/LinkedList<br /><br />———————————–<br /><br />ArrayList가 빠르다! 아니다 LinkedList가 빠르다!</p><br /><br /><p>말이 많다..</p><br /><br /><p>사람마다 잘하는 일이 다르듯이..</p><br /><br /><p>ArrayList와 LinkedList도 잘하는 일이 다르다.</p><br /><br /><p>ArrayList는 어릴적에 주로 레고를 가지고 놀아서,<br /><br />임의적 접근에 강하다. </p><br /><br /><p>예를 들자면..<br /><br />1000개의 음반중에 128번째 들어있는 음반을 듣고 싶다던가 할 때. musicArrayList.get(128) 으로 찾는게 빠르다는 것이다.</p><br /><br /><p>LinkedList는 어릴적에 주로 도미노게임을 하며 자라서 그런지..<br /><br />줄세우는것에 강하다.<br /><br />1000개의 음반을 사와서 차곡차곡 음반진열장에 넣는데 특화되있는것이다.<br /><br />for(int i=0;i&lt;1000;i++) {<br /><br />musicLinkedList.add(musicAlbum[i]);<br /><br />}</p><br /><br /><br /><p>Zero Length Array<br /><br />———————————–<br /><br />리스트를 배열로 바꿀때 길이가 0인 배열을 파라메터로 넣어주면..<br /><br />리스트가 비어있을때엔 길이가 0인 배열을 바로 넣어주고,<br /><br />리시트가 차있을때엔 리스트에 들어있는 (Object)타입을 파라메터에 맞게 변환해주는 효과가 있다.</p><br /><br /><br /><p>String out[] = (String[])stringlist.toArray(new String[0]);</p><br /><br /><br /><p>Reference<br /><br />———————————–<br /><br />Using ArrayList/LinkedList and Using Zero-Length Arrays<br /><br />(<a href="http://java.sun.com/developer/JDCTechTips/2002/tt0910.html">http://java.sun.com/developer/JDCTechTips/2002/tt0910.html</a>)</p>

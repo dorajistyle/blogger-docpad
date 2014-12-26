@@ -1,0 +1,7 @@
+---
+title: 이집트
+layout: 아프리카
+---
+
+<%- @partial('list', {collectionName: '이집트'}) %>
+

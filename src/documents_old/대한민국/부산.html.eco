@@ -1,0 +1,7 @@
+---
+title: 부산
+layout: 대한민국
+---
+
+<%- @partial('list', {collectionName: '부산'}) %>
+

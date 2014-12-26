@@ -1,0 +1,7 @@
+---
+title: 터키
+layout: 중동
+---
+
+<%- @partial('list', {collectionName: '터키'}) %>
+

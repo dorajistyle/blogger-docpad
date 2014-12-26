@@ -1,0 +1,18 @@
+---
+layout: IT
+title: "[버츄얼박스] 버츄얼박스에서  USB 인식 시키기 (How to see a usb device on  Virtualbox)."
+date: '2009-09-10'
+comments: true
+adsense: true
+ignored: false
+tags:
+- etc
+- IT
+- USB
+- USB Device
+- virtualbox
+- "버츄얼박스"
+- "인식"
+---
+
+<div class="imageblock left" style="float: left; text-align: center; padding: 10px;"><img src="http://images.google.com/images?q=tbn:JIJUs_FAbQztfM::blog.subaquatic.net/wp-content/uploads/2008/12/virtualbox.png" alt="버츄얼박스에서  USB 인식 시키기 (How to see a usb device on  Virtualbox).[버츄얼박스,USB,virtualbox]" height="131" width="131"><p style="margin-top: 5px;"><span>이미지출처</span>&nbsp;: <a href="http://blog.subaquatic.net/archives/virtualbox-p2v-success/" onclick="window.open(this.href);return false;"><span style="color: rgb(0, 128, 0);">blog.subaquatic.net</span></a></p></div><font size="3"><span style="font-weight: bold;">버츄얼박스에서&nbsp; USB 인식 시키기 (How to see a usb device on&nbsp; Virtualbox).</span></font><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />얼마전까지는 딱히 버츄얼박스에서&nbsp; USB를 인식시켜야 할 필요성을 못느꼈다.<br /><br />하지만 인증서가 만료가 다 되어가서 재발급을 받으려고 하니, 자꾸 먹통이 되는 버츄얼 박스.<br /><br />할 수 없이 USB에 인증서를 담아왔으나, 인식이 되지 않는다.<br /><br />그래서 여기저기 찾아보고 한번에 쫘악~~~!<br /><br />했더니 인식을 했다!!!<br /><br />----<br /><br />I didn't need USB reading in virtualbox.<br /><br />But my bank certificate was expired and I didn't get it in virtualbox cause I didn't work.<br /><br />Then I putted it on USB and tried online banking. <br /><br />But I wasn't able to connect USB in virtualbox.<br /><br />I had been search any document and apply it.<br /><br />Finally it works!!!<br /><br /><div style="border: 1px solid rgb(204, 204, 204); padding: 10px; background-color: rgb(255, 255, 255);">sudo usermod -a -G vboxusers &lt;ID&gt;<br />sudo shutdown -r now </div><br /><br /><span style="font-weight: bold;">References </span><br /><br /><a href="http://hugyou.wordpress.com/2008/06/07/%EC%9A%B0%EB%B6%84%ED%88%ACubuntuvirtualbox-usb-%EC%9E%A5%EC%B9%98-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95/" target="_blank">http://hugyou.wordpress.com/2008/06/07/%EC%9A%B0%EB%B6%84%ED%88%ACubuntuvirtualbox-usb-%EC%9E%A5%EC%B9%98-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95/</a><br /><br /><a href="http://crazia.tistory.com/378" target="_blank">http://crazia.tistory.com/378</a><br />

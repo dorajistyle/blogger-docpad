@@ -1,0 +1,7 @@
+---
+title: 라오스
+layout: 아시아
+---
+
+<%- @partial('list', {collectionName: '라오스'}) %>
+

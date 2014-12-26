@@ -1,0 +1,16 @@
+---
+layout: IT
+title: "리눅스 OS 브랜드, 버전 정보 보기 (Linux OS Brand Information)"
+date: '2011-10-16'
+comments: true
+adsense: true
+ignored: false
+tags:
+- IT
+- linux
+- OS
+- "리눅스"
+- "브랜드 버전 정보"
+---
+
+<div id="hreview-summary" class="hreview"><h2 id="article_summary" class="summary">리눅스에서 OS 브랜드와 버전 정보를 보려면 어떻게 해야 할까요?</h2><div class="item"><span class="fn">리눅스 OS 정보 보기</span></div><p><span class="description"><a title="sudo yum update -y By kaoticsnow" href="http://www.flickr.com/photos/kaoticsnow/4257013317/" target="_blank"><img class="photo" src="http://farm5.static.flickr.com/4058/4257013317_5a06fc56dd.jpg" alt="리눅스 터미널-'리눅스 OS 브랜드 버전 정보 보기'" width="500" height="500" /></a></p><p>자기 컴퓨터에 설치한 리눅스가 아니고, GUI 환경도 아닌 낯선 터미널을 만났을 때.<br />까만 건 화면이요.<br />하얀 건 글씨입니다.<br />'도대체 이 OS의 정체가 뭘까?'<br />우선 뭔지 알아야 안면을 트고 친해질 수 있죠.</p><p><span style="font-size: large; color: #ff0000;"><strong>uname -a</strong></span></p><p>를 입력하면 기본적인 정보를 줍니다.<br />'나는 인텔 칩셋용 64비트 리눅스다!'<br />라고요.<br />하지만 리눅스의 브랜드와 버젼정보는 알 수 없어요.<br /><br /><span style="color: #ff0000;"><strong><span style="font-size: large;"> cat /etc/*version</span></strong></span><br />혹은<br /><strong><span style="color: #ff0000; font-size: large;"> cat /etc/*release</strong></span><br /><br />를 터미널에 입력해 봅니다.<br />레드햇, 데비안, 수세, 슬렉웨어, 젠투 등은 이 방법으로 리눅스 브랜드와 버전을 알 수 있어요.<br />/etc/gentoo-release /etc/debian_version처럼 말이죠.<br />이 방법으로도 정보를 알아낼 수 없다?<br /><br /><span style="color: #ff0000; font-size: large;"><strong> cat /etc/issue*</strong></span><br />명령을 날립니다.<br /><br />/etc/issue 나 /etc/isssue.net 에 리눅스 브랜드와 버전이 적혀 있기도 하거든요.<br />저는 이 파일에서 서버의 정보를 알아냈어요.<br />만약 아직도 리눅스가 정체불명이다?!<br /><br />그렇다면.<br /><strong><span style="color: #ff0000;"> /var/log</span></strong> 나 <strong><span style="color: #ff0000;">/var/adm</span></strong> 폴더의 로그를 살펴보세요.<br />부트메시지엔 보통 버전이 들어가 있으니까요.<br />mail을 처음 설치하면 환영 메일을 보내주는 OS도 있으니,<strong><span style="color: #ff0000;"> /root/mbox</span></strong>에서 우연히 정보를 만날지도 몰라요.<br />이상, 모르는 리눅스를 만났을 때 이름 물어보는 법이었습니다..:D<br /></span>by <span class="reviewer vcard"><a class="url fn" title="월풍도원(月風道院) 소개" href="http://www.dorajistyle.pe.kr/p/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%86%8C%EA%B0%9C-%EC%9B%94%ED%92%8D%EB%8F%84%EC%9B%90%E6%9C%88%E9%A2%A8%E9%81%93%E9%99%A2-delight-on-simple-life.html" target="_blank">月風</a></span></div></p>

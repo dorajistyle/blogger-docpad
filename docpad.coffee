@@ -12,10 +12,10 @@ categories = {
 	'북미': ['미국','캐나다'],
 	'남미': [],
 	'오세아니아': [],
-	'책': ['수필','소설','희곡','시','철학','명상','건강비결','사회','창작기술','자기계발','기술','기타_책'],
-	'지식': ['언어','사회','인문학','기타_지식'],
+	'책': ['수필','소설','희곡','시','철학','건강비결','사회','창작기술','자기계발','기술','기타_책'],
+	'지식': ['언어','인문학','기타_지식'],
 	'건강': ['식사','운동','명상','기타_건강'],
-	'영화': ['한국','영국','미국','프랑스','이탈리아','스웨덴','독일','루마니아','홍콩','인도'],
+	'영화': ['한국영화','영국영화','미국영화','프랑스영화','이탈리아영화','스웨덴영화','독일영화','루마니아영화','홍콩영화','인도영화'],
 	'드라마': ['국내','국외'],
 	'음악': ['재즈','록','힙합','팝','어쿠스틱','트랜스','기타_음악'],
 	'문화': ['연극','뮤지컬','음악회','춤','전시','콘퍼런스'],
@@ -264,7 +264,7 @@ docpadConfig = {
 				relativeOutDirPath: ['유럽','프랑스'].join('/')
 				}, [{date: -1}]
 			)						
-		'일일': ->
+		'독일': ->
 			@getCollection('html').findAllLive({
 				relativeOutDirPath: ['유럽','독일'].join('/')
 				}, [{date: -1}]
@@ -415,11 +415,6 @@ docpadConfig = {
 				relativeOutDirPath: ['책','철학'].join('/')
 				}, [{date: -1}]
 			)
-		'명상': ->
-			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['책','명상'].join('/')
-				}, [{date: -1}]
-			)
 		'건강비결': ->
 			@getCollection('html').findAllLive({
 				relativeOutDirPath: ['책','건강비결'].join('/')
@@ -458,11 +453,6 @@ docpadConfig = {
 				relativeOutDirPath: ['지식','언어'].join('/')
 				}, [{date: -1}]
 			)
-		'사회': ->
-			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['지식','사회'].join('/')
-				}, [{date: -1}]
-			)
 		'인문학': ->
 			@getCollection('html').findAllLive({
 				relativeOutDirPath: ['지식','인문학'].join('/')
@@ -488,7 +478,7 @@ docpadConfig = {
 			)
 		'명상': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['건강','명상'].join('/')
+				relativeOutDirPath: ['건강','상상'].join('/')
 				}, [{date: -1}]
 			)
 		'기타_건강': ->
@@ -499,54 +489,54 @@ docpadConfig = {
 
 		'영화': ->
 			@getCollection('html').findAllLive({relativeOutDirPath: '영화'}, [title:1])
-		'한국': ->
+		'한국영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','한국'].join('/')
+				relativeOutDirPath: ['영화','한국영화'].join('/')
 				}, [{date: -1}]
 			)
-		'영국': ->
+		'영국영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','영국'].join('/')
+				relativeOutDirPath: ['영화','영국영화'].join('/')
 				}, [{date: -1}]
 			)
-		'미국': ->
+		'미국영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','미국'].join('/')
+				relativeOutDirPath: ['영화','미국영화'].join('/')
 				}, [{date: -1}]
 			)
-		'프랑스': ->
+		'프랑스영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','프랑스'].join('/')
+				relativeOutDirPath: ['영화','프랑스영화'].join('/')
 				}, [{date: -1}]
 			)
-		'이탈리아': ->
+		'이탈리아영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','이탈리아'].join('/')
+				relativeOutDirPath: ['영화','이탈리아영화'].join('/')
 				}, [{date: -1}]
 			)
-		'스웨덴': ->
+		'스웨덴영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','스웨덴'].join('/')
+				relativeOutDirPath: ['영화','스웨덴영화'].join('/')
 				}, [{date: -1}]
 			)
-		'독일': ->
+		'독일영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','독일'].join('/')
+				relativeOutDirPath: ['영화','독일영화'].join('/')
 				}, [{date: -1}]
 			)
-		'루마니아': ->
+		'루마니아영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','루마니아'].join('/')
+				relativeOutDirPath: ['영화','루마니아영화'].join('/')
 				}, [{date: -1}]
 			)
-		'홍콩': ->
+		'홍콩영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','홍콩'].join('/')
+				relativeOutDirPath: ['영화','홍콩영화'].join('/')
 				}, [{date: -1}]
 			)
-		'인도': ->
+		'인도영화': ->
 			@getCollection('html').findAllLive({
-				relativeOutDirPath: ['영화','인도'].join('/')
+				relativeOutDirPath: ['영화','인도영화'].join('/')
 				}, [{date: -1}]
 			)
 

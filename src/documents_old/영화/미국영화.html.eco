@@ -1,0 +1,7 @@
+---
+title: 미국영화
+layout: 영화
+---
+
+<%- @partial('list', {collectionName: '미국영화'}) %>
+

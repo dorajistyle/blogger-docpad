@@ -1,0 +1,17 @@
+---
+layout: IT
+title: "[SSH] ssh 키 페어 만들기 (ssh key pair generation on linux)"
+date: '2011-12-07'
+comments: true
+adsense: true
+ignored: false
+tags:
+- generation
+- IT
+- key pair
+- linux
+- OS
+- ssh
+---
+
+<div id="hreview-summary" class="hreview"><h2 id="article_summary" class="summary">ssh 키 페어를 만드는 방법과 오류 해결 방법입니다. (ssh key pair generation and trouble shooting)</h2><div class="item"><span class="fn">리눅스에서 ssh key pair 만들기</span></div><p><span class="description">아래의 커멘드를 입력하면 ssh 키 페어가 생성 됩니다.</span></p><p><strong>ssh-keygen -t rsa</strong></p><p>Generating public/private rsa key pair.<br />Enter file in which to save the key (/home/user/.ssh/id_rsa): [enter for default]<br />Enter passphrase (empty for no passphrase): [password]<br />Enter same passphrase again: [password confirmation]<br />Your identification has been saved in /home/user/.ssh/id_rsa.<br />Your public key has been saved in /home/user/.ssh/id_rsa.pub.<br />The key fingerprint is:<br />...<br />user@ssh_key_pair_generation</p><p>그리고 아래의 키워드로 생성된 public key를 볼 수 있어요.</p><p>이 키를 필요한 곳에 복사하면 ssh 키 페어 설정이 완료 되죠.</p><p><strong>cat ~/.ssh/id_rsa.pub</strong><br />ssh-rsa ...<br />...<br />...<br />...<br />...<br />user@ssh_key_pair_generation</p><p>&nbsp;</p><p><hr />&nbsp;</p><p>설명서 대로만 잘 되면 좋겠지만,<br />가끔 예기치 않은 문제가 발생합니다.</p><p>ssh-keygen -t rsa 명령어를 실행하고,<br />Enter file in which to save the key (/home/user/.ssh/id_rsa): <span style="color: #0000ff;"><strong>~/files/id_rsa</strong></span><br />부분에서 분명 있는 경로를 입력했는데 파일이나 디렉토리를 찾을 수 없다는 메시지가 나옵니다.</p><p>open ~/files/id_rsa failed: <span style="color: #ff0000;">No such file or directory.</span><br />Saving the key failed: <strong><span style="color: #0000ff;">~/files/id_rsa.</span></strong></p><p>오타를 쳤나 눈 씻고 봐도 제대로 입력했네요.</p><p>이럴 땐 <strong>cd <span style="color: #0000ff;">~/files</span></strong> 를 이용해 해당 디렉토리로 먼저 갑니다.</p><p>Enter file in which to save the key (/home/user/.ssh/id_rsa): <strong><span style="color: #0000ff;">./id_rsa</strong></span></p><p>위처럼 입력하면 ssh key pair가 제대로 생성되요.</p><p>여러 개의 ssh key pair를 사용하신다면,  ~/.ssh/config에서 아래와 같이 설정 가능하답니다.</p><p>nano <strong><span style="color: #0000ff;">~/.ssh/config</span></strong><br />Host github.com<br />IdentityFile ~/myPublicKeyFolder/myGitHubFile<br />Host heroku.com<br />IdentityFile ~/myPublicKeyFolder/myHerokuFile</p><p>호스팅에서 .ssh 디렉토리 권한을 막아 놨을 경우.<br />다른 디렉토리에 만든 키를 어떻게 사용해야 할까요?</p><p><strong> ssh-agent /bin/bash</strong><br /><strong> ssh-add ~/files/id_rsa</strong></p><p>위의 명령어를 사용하면 됩니다.</p><p><h3>ssh 키 만들기 도구</h3><p><a title="msysgit" href="http://code.google.com/p/msysgit/" target="_blank">MSysGit</a></p><br /><strong>참고 자료</strong><br /><strong><a title="Setting a custom path for git private ssh key on linux" href="http://stackoverflow.com/questions/5323778/setting-a-custom-path-for-git-private-ssh-key-on-linux" target="_blank">Setting a custom path for git private ssh key on linux</a></strong></p><p>by <span class="reviewer vcard"><a class="url fn" title="월풍도원(月風道院) 소개" href="http://www.dorajistyle.pe.kr/p/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%86%8C%EA%B0%9C-%EC%9B%94%ED%92%8D%EB%8F%84%EC%9B%90%E6%9C%88%E9%A2%A8%E9%81%93%E9%99%A2-delight-on-simple-life.html" target="_blank">月風</a></span></div></p>

@@ -1,0 +1,7 @@
+---
+title: tip
+layout: IT
+---
+
+<%- @partial('list', {collectionName: 'tip'}) %>
+

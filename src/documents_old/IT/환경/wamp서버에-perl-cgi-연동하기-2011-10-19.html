@@ -1,0 +1,17 @@
+---
+layout: IT
+title: WAMP서버에 Perl, CGI 연동하기
+date: '2011-10-19'
+comments: true
+adsense: true
+ignored: false
+tags:
+- CGI
+- IT
+- Perl
+- WAMP
+- "설정"
+- "환경"
+---
+
+<div id="hreview-summary" class="hreview"><h2 id="article_summary" class="summary">WAMP서버에 Perl과 CGI를 연동하는 방법입니다.</h2><div class="item"><span class="fn">WAMP서버에 Perl, CGI 연동하기</span></div><p><span class="description"><a title="Ruby, Python and Perl in TextMate By kteague" rel="bookmark" href="http://www.flickr.com/photos/kteague/253859670/" target="_blank"><img class="photo" src="http://farm1.static.flickr.com/117/253859670_95c92d1a1b_z.jpg?zz=1" alt="텍스트 메이트-'WAMP서버에 Perl, CGI 연동하기'" width="640" height="342" /></a></span></p><p>우선 <strong><a title="Active Perl" href="http://www.activestate.com/activeperl" target="_blank">Active Perl</a></strong>을 다운받아 설치합니다.</p><p>아파치 서버의 <strong><span style="color: #0000ff;">httpd.conf</span></strong>의<strong> Directory</strong>안에 있는 <strong>Options</strong>에<br /><strong>&nbsp;Includes ExecCGI</strong>를 추가해 줍니다.</p><p><strong>DirectoryIndex</strong>에 <strong>index.cgi index.pl</strong>를 추가해 줍니다.</p><p>cgi-bin 경로가 Default가 아니라면, 알맞은 경로로 변경해 줍니다.</p><p><strong>ScriptAlias /cgi-bin/ "/cgi-bin"</strong><br /><strong>&lt;Directory "/cgi-bin"&gt;</strong></p><p>다음을 추가해 주면 <span style="color: #0000ff;"><strong>httpd.conf</strong></span> 설정이 완료 됩니다.<br /><strong>AddHandler cgi-script .cgi </strong><br /><strong>AddHandler cgi-script .pl</strong></p><p>펄 개발을 할 때, 스크립트 파일인 /cgi-bin/filename.pl 파일의 가장 위에<br /><strong>#!c:/Perl/bin/perl.exe</strong> (펄 경로) 를 추가해줍니다.</p><p>만약 경로를 알맞게 써주었는데도 제대로 작동하지 않으면,<br /><strong><span style="color: #0000ff;">httpd.conf</span></strong> 파일에 <strong>ScriptInterpreterSource registry</strong> 를 한 줄 추가해 줍니다.</p><p>이제 MySQL 인터페이스를 설치할 차례입니다.</p><p><strong>cmd</strong>를 실행하고, 펄이 설치된 폴더로 가세요.</p><p>c:\perl\bin\&gt; <strong>ppm repo add uwinnipeg</strong></p><p>위 명령어로 저장소를 추가해 줍니다.</p><p>c:\perl\bin\&gt; <strong>ppm install DBD-mysql</strong></p><p>마지막으로 DBD-mysql을 인스톨 하면 완료!</p><p>액티브펄 설치시에 폴더를 임의로 변경했다면,<br />DBD가 엉뚱한 폴더에 인스톨 될 수 있습니다.<br />저는 64비트 OS용을 깔았더니, c:\Perl64에 설치되더라고요.<br />하지만 인스톨된 DBD-mysql을 설치된 펄 폴더로 옮겨주면 이상 없이 잘 동작합니다.<br />펄 개발 환경을 구축하실 분이 계실지 모르겠지만,<br />혹시 계시다면 이 글이 도움이 되면 좋겠네요.:D</p><p><strong>참고 자료</strong></p><p><span style="font-size: large;"><a title="Setting Up Perl and CGI For Wamp Server WAMP(P)" rel="bookmark" href="http://www.chromicdesign.com/2009/05/setting-up-perl-for-wampp.html" target="_blank">Setting Up Perl and CGI For Wamp Server WAMP(P)</a></span></p><p>by <span class="reviewer vcard"><a class="url fn" title="월풍도원(月風道院) 소개" href="http://www.dorajistyle.pe.kr/p/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%86%8C%EA%B0%9C-%EC%9B%94%ED%92%8D%EB%8F%84%EC%9B%90%E6%9C%88%E9%A2%A8%E9%81%93%E9%99%A2-delight-on-simple-life.html" target="_blank">月風</a></span></div></p>

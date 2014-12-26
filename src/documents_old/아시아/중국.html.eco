@@ -1,0 +1,7 @@
+---
+title: 중국
+layout: 아시아
+---
+
+<%- @partial('list', {collectionName: '중국'}) %>
+

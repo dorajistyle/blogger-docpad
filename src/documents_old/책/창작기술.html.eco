@@ -1,0 +1,7 @@
+---
+title: 창작기술
+layout: 책
+---
+
+<%- @partial('list', {collectionName: '창작기술'}) %>
+

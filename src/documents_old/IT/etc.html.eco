@@ -1,0 +1,7 @@
+---
+title: etc
+layout: IT
+---
+
+<%- @partial('list', {collectionName: 'etc'}) %>
+

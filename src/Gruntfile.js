@@ -15,10 +15,10 @@ var categories = {
 	'북미': ['미국','캐나다'],
 	'남미': [],
 	'오세아니아': [],
-	'책': ['수필','소설','희곡','시','철학','명상','건강비결','사회','창작기술','자기계발','기술','기타_책'],
-	'지식': ['언어','사회','인문학','기타_지식'],
+	'책': ['수필','소설','희곡','시','철학','건강비결','사회','창작기술','자기계발','기술','기타_책'],
+	'지식': ['언어','인문학','기타_지식'],
 	'건강': ['식사','운동','명상','기타_건강'],
-	'영화': ['한국','영국','미국','프랑스','이탈리아','스웨덴','독일','루마니아','홍콩','인도'],
+	'영화': ['한국영화','영국영화','미국영화','프랑스영화','이탈리아영화','스웨덴영화','독일영화','루마니아영화','홍콩영화','인도영화'],
 	'드라마': ['국내','국외'],
 	'음악': ['재즈','록','힙합','팝','어쿠스틱','트랜스','기타_음악'],
 	'문화': ['연극','뮤지컬','음악회','춤','전시','콘퍼런스'],
@@ -176,7 +176,7 @@ var descriptions = {'여행': "",
             }
 //            str='ruby -rubygems -e \'require "jekyll-import";    JekyllImport::Importers::RSS.run({"source" => "http://www.dorajistyle.pe.kr/feeds/posts/default/-/%EC%B1%85/%EC%86%8C%EC%84%A4?max-results=105&orderby=published&alt=rss","dest" => "인천/즁규"})\'';
             console.log(str);
-            return str+'echo "finish" && sed "$d" updated_at.txt >> updated_at.history && echo "$(date +%Y-%m-%d)T00:00:00" > updated_at.txt';
+            return str+'echo "finish" && sed "$d" updated_at.txt >> updated_at.history && echo "$(date +%Y-%m-%d)T$(date +%H:%M:%S)" > updated_at.txt';
             //return str;
         },
         options: {

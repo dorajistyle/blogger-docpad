@@ -1,0 +1,7 @@
+---
+title: 식사
+layout: 건강
+---
+
+<%- @partial('list', {collectionName: '식사'}) %>
+

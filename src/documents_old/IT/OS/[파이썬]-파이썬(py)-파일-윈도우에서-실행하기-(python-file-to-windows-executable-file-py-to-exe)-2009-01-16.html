@@ -1,0 +1,17 @@
+---
+layout: IT
+title: "[파이썬] 파이썬(Py) 파일 윈도우에서 실행하기. (python file to windows executable file! - .py to .exe)"
+date: '2009-01-16'
+comments: true
+adsense: true
+ignored: false
+tags:
+- executable
+- IT
+- OS
+- py2exe
+- Python
+- windows
+---
+
+<div class="imageblock left" style="float: left; text-align: center; padding: 10px;"><img src="http://images.google.com/images?q=tbn:O0sQCb-NpuczKM::static.commentcamarche.net/en.kioskea.net/faq/images/0-bGU8tPwR-python00-s-.png" alt="파이썬(Py) 파일 윈도우에서 실행하기. (python file to windows executable file! - .py to .exe)[파이썬,윈도우,실행,py2exe]" height="116" width="85"><p style="margin-top: 5px;"><span>이미지출처</span>&nbsp;: <a href="http://en.kioskea.net/faq/2091-python-read-and-write-csv-files" onclick="window.open(this.href);return false;"><span style="color: rgb(0, 128, 0);">en.kioskea.net</span></a></p></div><font size="3"><span style="font-weight: bold;">파이썬(Py) 파일 윈도우에서 실행하기. (python file to windows executable file! - .py to .exe)</span></font><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><p>If you want to python application in windows without python, you can considering ‘py2exe’.</p><br /><br /><p>It is easy.</p><br /><br /><p>Step1. Decide what you want to turns Windows application.<br /><br />Step2. Create setup script</p><br /><p class="amcode">Code:</p><div class="codeblock amc_code amc_short"><br /><table><tbody><tr class="amc_code_odd"><td class="amc_line"><br /></td><td><code><span class="amc_default">1 from distutils.core import setup</span></code></td></tr><tr class="amc_code_even"><td class="amc_line"><br /></td><td><code><span class="amc_default">&nbsp;&nbsp; 2 import py2exe</span></code></td></tr><tr class="amc_code_odd"><td class="amc_line"><br /></td><td><code><span class="amc_default">&nbsp;&nbsp; 3 </span></code></td></tr><tr class="amc_code_even"><td class="amc_line"><br /></td><td><code><span class="amc_default">&nbsp;&nbsp; 4 setup(console=['whatUwant.py'])</span></code></td></tr></tbody></table></div><br /><p>Step3. run script with py2exe<br /><br /><code>python setup.py py2exe</code></p><br /><br /><p>If you want execute python application that use win32com on other computer without python.<br /><br />just add option with run script<br /><br /><code>python setup.py py2exe --packages win32com </code></p><br /><br /><br /><p><a href="http://www.python.org/">http://www.python.org/</a><br /><br /><a href="http://www.py2exe.org/">http://www.py2exe.org/</a><br /><br /><a href="http://python.net/crew/mhammond/win32/Downloads.html">http://python.net/crew/mhammond/win32/Downloads.html</a></p>
