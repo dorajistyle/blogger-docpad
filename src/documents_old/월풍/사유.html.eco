@@ -1,7 +1,0 @@
----
-title: 사유
-layout: 월풍
----
-
-<%- @partial('list', {collectionName: '사유'}) %>
-

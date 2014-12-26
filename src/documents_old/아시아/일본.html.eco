@@ -1,7 +1,0 @@
----
-title: 일본
-layout: 아시아
----
-
-<%- @partial('list', {collectionName: '일본'}) %>
-

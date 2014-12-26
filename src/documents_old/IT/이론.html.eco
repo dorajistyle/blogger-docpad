@@ -1,7 +1,0 @@
----
-title: 이론
-layout: IT
----
-
-<%- @partial('list', {collectionName: '이론'}) %>
-

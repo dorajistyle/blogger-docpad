@@ -1,7 +1,0 @@
----
-title: 시리아
-layout: 중동
----
-
-<%- @partial('list', {collectionName: '시리아'}) %>
-

@@ -1,7 +1,0 @@
----
-title: 준비
-layout: 여행
----
-
-<%- @partial('list', {collectionName: '준비'}) %>
-

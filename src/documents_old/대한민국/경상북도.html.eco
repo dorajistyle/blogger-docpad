@@ -1,7 +1,0 @@
----
-title: 경상북도
-layout: 대한민국
----
-
-<%- @partial('list', {collectionName: '경상북도'}) %>
-

@@ -1,7 +1,0 @@
----
-title: 기타_건강
-layout: 건강
----
-
-<%- @partial('list', {collectionName: '기타_건강'}) %>
-

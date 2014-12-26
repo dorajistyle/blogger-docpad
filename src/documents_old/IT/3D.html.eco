@@ -1,7 +1,0 @@
----
-title: 3D
-layout: IT
----
-
-<%- @partial('list', {collectionName: '3D'}) %>
-

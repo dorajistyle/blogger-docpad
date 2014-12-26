@@ -1,7 +1,0 @@
----
-title: 활동식
-layout: 조리법
----
-
-<%- @partial('list', {collectionName: '활동식'}) %>
-

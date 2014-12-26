@@ -1,7 +1,0 @@
----
-title: 환경
-layout: IT
----
-
-<%- @partial('list', {collectionName: '환경'}) %>
-

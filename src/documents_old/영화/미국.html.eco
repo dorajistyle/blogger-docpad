@@ -1,7 +1,0 @@
----
-title: 미국
-layout: 영화
----
-
-<%- @partial('list', {collectionName: '미국'}) %>
-

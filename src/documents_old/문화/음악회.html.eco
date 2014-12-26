@@ -1,7 +1,0 @@
----
-title: 음악회
-layout: 문화
----
-
-<%- @partial('list', {collectionName: '음악회'}) %>
-

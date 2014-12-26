@@ -1,7 +1,0 @@
----
-title: 말레이시아
-layout: 아시아
----
-
-<%- @partial('list', {collectionName: '말레이시아'}) %>
-

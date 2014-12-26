@@ -1,7 +1,0 @@
----
-title: 캐나다
-layout: 북미
----
-
-<%- @partial('list', {collectionName: '캐나다'}) %>
-

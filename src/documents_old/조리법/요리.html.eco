@@ -1,7 +1,0 @@
----
-title: 요리
-layout: 조리법
----
-
-<%- @partial('list', {collectionName: '요리'}) %>
-

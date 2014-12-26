@@ -1,7 +1,0 @@
----
-title: 사회
-layout: 지식
----
-
-<%- @partial('list', {collectionName: '사회'}) %>
-

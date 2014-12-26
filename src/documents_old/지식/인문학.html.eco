@@ -1,7 +1,0 @@
----
-title: 인문학
-layout: 지식
----
-
-<%- @partial('list', {collectionName: '인문학'}) %>
-

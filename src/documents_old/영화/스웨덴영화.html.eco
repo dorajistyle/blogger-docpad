@@ -1,7 +1,0 @@
----
-title: 스웨덴영화
-layout: 영화
----
-
-<%- @partial('list', {collectionName: '스웨덴영화'}) %>
-

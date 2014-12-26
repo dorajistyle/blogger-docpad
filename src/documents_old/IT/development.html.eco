@@ -1,7 +1,0 @@
----
-title: development
-layout: IT
----
-
-<%- @partial('list', {collectionName: 'development'}) %>
-

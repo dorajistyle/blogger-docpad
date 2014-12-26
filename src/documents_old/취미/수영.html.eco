@@ -1,7 +1,0 @@
----
-title: 수영
-layout: 취미
----
-
-<%- @partial('list', {collectionName: '수영'}) %>
-

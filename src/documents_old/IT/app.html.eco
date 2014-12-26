@@ -1,7 +1,0 @@
----
-title: app
-layout: IT
----
-
-<%- @partial('list', {collectionName: 'app'}) %>
-

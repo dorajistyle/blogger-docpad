@@ -1,7 +1,0 @@
----
-title: 충청남도
-layout: 대한민국
----
-
-<%- @partial('list', {collectionName: '충청남도'}) %>
-

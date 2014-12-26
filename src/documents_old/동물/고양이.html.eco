@@ -1,7 +1,0 @@
----
-title: 고양이
-layout: 동물
----
-
-<%- @partial('list', {collectionName: '고양이'}) %>
-

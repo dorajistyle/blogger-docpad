@@ -1,7 +1,0 @@
----
-title: db
-layout: IT
----
-
-<%- @partial('list', {collectionName: 'db'}) %>
-

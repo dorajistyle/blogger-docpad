@@ -1,7 +1,0 @@
----
-title: 팝
-layout: 음악
----
-
-<%- @partial('list', {collectionName: '팝'}) %>
-

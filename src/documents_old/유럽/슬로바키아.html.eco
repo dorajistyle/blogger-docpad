@@ -1,7 +1,0 @@
----
-title: 슬로바키아
-layout: 유럽
----
-
-<%- @partial('list', {collectionName: '슬로바키아'}) %>
-

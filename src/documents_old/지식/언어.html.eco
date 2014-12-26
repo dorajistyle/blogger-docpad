@@ -1,7 +1,0 @@
----
-title: 언어
-layout: 지식
----
-
-<%- @partial('list', {collectionName: '언어'}) %>
-

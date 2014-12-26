@@ -1,7 +1,0 @@
----
-title: 음주가무
-layout: 취미
----
-
-<%- @partial('list', {collectionName: '음주가무'}) %>
-

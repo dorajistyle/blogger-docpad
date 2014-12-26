@@ -1,7 +1,0 @@
----
-title: 요르단
-layout: 중동
----
-
-<%- @partial('list', {collectionName: '요르단'}) %>
-

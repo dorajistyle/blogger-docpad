@@ -1,7 +1,0 @@
----
-title: 소설
-layout: 책
----
-
-<%- @partial('list', {collectionName: '소설'}) %>
-

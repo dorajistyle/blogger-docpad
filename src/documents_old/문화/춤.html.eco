@@ -1,7 +1,0 @@
----
-title: 춤
-layout: 문화
----
-
-<%- @partial('list', {collectionName: '춤'}) %>
-

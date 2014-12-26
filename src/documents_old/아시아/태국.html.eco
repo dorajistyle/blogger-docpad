@@ -1,7 +1,0 @@
----
-title: 태국
-layout: 아시아
----
-
-<%- @partial('list', {collectionName: '태국'}) %>
-

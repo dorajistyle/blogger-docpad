@@ -1,7 +1,0 @@
----
-title: 국내
-layout: 드라마
----
-
-<%- @partial('list', {collectionName: '국내'}) %>
-

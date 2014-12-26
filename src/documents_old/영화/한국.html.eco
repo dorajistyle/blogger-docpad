@@ -1,7 +1,0 @@
----
-title: 한국
-layout: 영화
----
-
-<%- @partial('list', {collectionName: '한국'}) %>
-

@@ -1,7 +1,0 @@
----
-title: 인천
-layout: 대한민국
----
-
-<%- @partial('list', {collectionName: '인천'}) %>
-

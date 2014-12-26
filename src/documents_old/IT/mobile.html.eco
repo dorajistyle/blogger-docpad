@@ -1,7 +1,0 @@
----
-title: mobile
-layout: IT
----
-
-<%- @partial('list', {collectionName: 'mobile'}) %>
-

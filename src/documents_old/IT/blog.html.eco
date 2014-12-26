@@ -1,7 +1,0 @@
----
-title: blog
-layout: IT
----
-
-<%- @partial('list', {collectionName: 'blog'}) %>
-

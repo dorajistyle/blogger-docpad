@@ -1,7 +1,0 @@
----
-title: 필리핀
-layout: 아시아
----
-
-<%- @partial('list', {collectionName: '필리핀'}) %>
-

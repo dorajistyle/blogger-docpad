@@ -1,7 +1,0 @@
----
-title: 기타_음악
-layout: 음악
----
-
-<%- @partial('list', {collectionName: '기타_음악'}) %>
-

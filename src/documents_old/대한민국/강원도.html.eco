@@ -1,7 +1,0 @@
----
-title: 강원도
-layout: 대한민국
----
-
-<%- @partial('list', {collectionName: '강원도'}) %>
-

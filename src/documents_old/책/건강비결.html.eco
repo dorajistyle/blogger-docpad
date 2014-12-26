@@ -1,7 +1,0 @@
----
-title: 건강비결
-layout: 책
----
-
-<%- @partial('list', {collectionName: '건강비결'}) %>
-

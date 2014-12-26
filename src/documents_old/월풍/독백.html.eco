@@ -1,7 +1,0 @@
----
-title: 독백
-layout: 월풍
----
-
-<%- @partial('list', {collectionName: '독백'}) %>
-

@@ -1,7 +1,0 @@
----
-title: web
-layout: IT
----
-
-<%- @partial('list', {collectionName: 'web'}) %>
-

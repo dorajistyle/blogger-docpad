@@ -1,7 +1,0 @@
----
-title: 프랑스
-layout: 영화
----
-
-<%- @partial('list', {collectionName: '프랑스'}) %>
-
