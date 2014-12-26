@@ -27,6 +27,9 @@ nvm use 0.10
 gem install jekyll-import
 ```
 
+* [Download blogger-docpad.rb](https://gist.github.com/dorajistyle/b39f2284dafd03741eb0)
+* copy blogger-docpad.rb into .gem/ruby/x.x.x/gems/jekyll-import-x.x.x/lib/jekyll-import/importers/
+
 * [Install DocPad](https://github.com/bevry/docpad)
                 
 ```bash
