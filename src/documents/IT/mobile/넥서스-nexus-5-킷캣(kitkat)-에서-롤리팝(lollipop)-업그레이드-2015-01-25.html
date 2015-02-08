@@ -1,0 +1,17 @@
+---
+layout: IT
+title: "넥서스 Nexus 5  킷캣(kitkat) 에서 롤리팝(lollipop) 업그레이드"
+date: '2015-01-25'
+comments: true
+adsense: true
+ignored: false
+tags:
+- IT
+- kitcat
+- lollipop
+- mobile
+- nexus5
+- update
+---
+
+<h2 id="article_summary" class="summary">안드로이드 4.4 킷켓(kitkat)에서 5.0 롤리팝(lollipop)으로 업데이트.</h2><p>안드로이드 롤리팝 버전이 나온 지 한참인데 넥서스 5에서 자동 업데이트가 되지 않아서 주말을 맞아 수동으로 업데이트했다.</p><h3>구글 넥서스 5 롤리팝 버전 수동 업데이트 순서</h3><ol><li>우선 중요 파일과 앱을 백업한다. 지워져도 서운하지 않을 파일만 남긴다.</li><li><a href="https://developers.google.com/android/nexus/images#hammerhead" target="_blank">https://developers.google.com/android/nexus/images#hammerhead</a> 에서 안드로이드 5.0.1 (LRX22C)이미지를 받아 압축을 푼다.</li><li>넥서스 5 전원이 꺼진 상태에서 전원+소리 크게+소리 작게 버튼을 동시에 눌러 빠른부팅모드(Fastboot)로 진입한다.</li><li>USB 케이블을 이용하여 컴퓨터에 넥서스 5를 연결한다. (usb 3.0 포트에 꼽으면 fastboot에서 인식을 못 하기도 하니 usb2.0포트에 꼽는다.)</li><li>심호흡을 한다.</li><li>flash-all.sh 스크립트를 실행하여 넥서스5 에 이미지를 넣는다. (윈도우즈 사용자는 flash-all.bat)</li></ol><p>스크립트를 살펴보면 아래와 같다.<br /><code>fastboot flash bootloader bootloader-hammerhead-hhz12d.img<br />fastboot reboot-bootloader<br />sleep 5<br />fastboot flash radio radio-hammerhead-m8974a-2.0.50.2.22.img<br />fastboot reboot-bootloader<br />sleep 5<br />fastboot -w update image-hammerhead-lrx22c.zip</code><br />부트로더, 라디오, lrex22c버전 이미지 순서로 설치한다.<br />여기서 아차 싶었다. <br />커스텀 리커버리를 통해 롬을 설치할 땐 Wipe 메뉴에서 지울 데이터를 선택하여 지우고 롬을 올리면 되는데 이건 싹. 밀어버린다.<br />내부 저장소에 저장된 파일까지 몽땅.<br />백업을 해 두긴 했으나 티타늄 백업으로 백업한 apk는 컴퓨터로 옮겨두지 않았는데 모두 다 지워졌다.<br />새해는 새 기분으로.<br />폰을 새로 산 기분이다!<br />혹시나 해서 연락처와 사진은 컴퓨터로 옮겨 두어서 다행이다. 비록 즐겨듣던 노래는 모두 사라졌지만.<br />아무튼, 이제 넥서스5가 공장 초기화 상태가 되었다.<br />내친김에 롬도 새로 깔고 커널도 바꾸어 깔아보자.</p><h3>TWRP recovery 설치</h3><p>공장초기화 되었기 때문에 우선 커스텀 리커버리를 설치해야 한다.<br />openrecovery-twrp-2.8.4.0-hammerhead.img<br />(<a href="https://www.androidfilehost.com/?fid=95897840722643055" target="_blank">https://www.androidfilehost.com/?fid=95897840722643055</a>)파일을 받아 fastboot로 설치한다.<br /><code>fastboot flash recovery openrecovery-twrp-2.8.4.0-hammerhead.img</code><br />fastboot모드에서 음량버튼으로 recovery를 선택하여 TWRP로 들어간다.</p><h3>Cataclysm 롬 설치.</h3><ol><li><a href="http://forum.xda-developers.com/google-nexus-5/orig-development/rom-cataclysm-nexus-5-t2518660" target="_blank">http://forum.xda-developers.com/google-nexus-5/orig-development/rom-cataclysm-nexus-5-t2518660</a> 페이지에서 롬을 내려받는다.</li><li>TWRP에서 Wipe메뉴로 가서 internal storage를 제외한 데이터를 날려준다.</li><li>전원을 끈다.</li><li>TWRP recovery로 진입한다.</li><li>Install 메뉴에서 Cataclysm이미지를 설치한다.<br />Wipe후 바로 설치하려고 하면 오류가 발생한다.</li></ol><h3>ElementalX 커널 설치</h3><ol><li><a href="http://elementalx.org/devices/nexus-5/" target="_blank">http://elementalx.org/devices/nexus-5/</a>에서 ElementalX-N5-2.05를 다운받는다.</li><li>TWRP recovery로 진입한다.</li><li>Install 메뉴에서 ElementalX커널을 설치한다.<br />Cataclysm을 설치하고 재부팅 없이 바로 ElementalX커널을 설치해도 된다.</li></ol><h3>설치 후기</h3><p>가벼운 느낌이다.<br />기분 탓인지 터치 감도가 떨어지는 것 같다.<br />Cataclysm + ElementalX가 배터리 소모가 적다는데, 아직 피부로 와 닿지는 않는다.</p><p>음악이 다 지워져서 허전하다.<br />낡은 PC를 뒤적거리다가 즐겨찾기 음악 폴더를 발견했고, 십 년도 더 된 노래를 옮겨 담았다.<br />집을 나서 음악을 틀었더니 이어폰 선을 타고 귀로 퍼진다.<br />흥겨운 리듬을 타고 머리가 절로 흔들거린다.<br />덕분에 나도 이십 대로 돌아간 듯 발걸음이 가벼워졌다.</p><p><iframe src="//www.youtube.com/embed/GMr4m6HrtmQ?rel=0" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p><p>One T Cool T - The Magic Key</p>
